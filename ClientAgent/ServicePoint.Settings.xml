@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServicePoint version="2">
+  <MEMBER>
+    <ID>
+    </ID>
+    <SERVER_KEY>서버키 입력</SERVER_KEY>
+  </MEMBER>
+  <AGENT>
+    <BuildNumber>2</BuildNumber>
+    <WS_URL>http://localhost:8080</WS_URL>
+    <!--The unit of this inverval is second. The default value is 15 seconds, and recommended to be used.-->
+    <!--The valid range of this interval is 3 to 3600 seconds. Any interal, smaller than 5 seconds will be ignored.-->
+    <PerformanceCollectInterval>15</PerformanceCollectInterval>
+    <MaxAgentMemorySizeMB>70</MaxAgentMemorySizeMB>
+  </AGENT>
+  <WEB>
+    <!--The following values in WEB section, are only applicable for the server types of 'Web', 'Web, BizTalk', and 'SharePoint'.-->
+    <!--For example, if the server type is Windows, you don't need to configure the followings.-->
+    <MaxPoolSize>100</MaxPoolSize>
+    <IISLogAnalysis>TRUE</IISLogAnalysis>
+    <!-- Use 'SYSTEM_DEFAULT' if you didn't change IIS logging options, otherwise, please specify IIS log path. (e.g) d:\data\logs -->
+    <LogFileDirectory>SYSTEM_DEFAULT</LogFileDirectory>
+    <!-- Example : www.sample_names.org, or financeweb-->
+    <HostHeader>www.testing-wsp.com</HostHeader>
+    <HC_Enabled>TRUE</HC_Enabled>
+    <!--30 seconds by default, valid range is from 1 to 60 seconds.-->
+    <HC_Interval>30</HC_Interval>
+    <!--5 seconds by default, valid range is greater than 1 second.-->
+    <HC_TimeOut>5</HC_TimeOut>
+    <HC_URLS>
+      <!--Use 'HC_URL3' key, and set its URL, if you need more health check URL's -->
+      <URL>http://localhost/iisstart.htm</URL>
+      <URL>http://localhost:80/iisstart.htm</URL>
+    </HC_URLS>
+    <LastLogFile>
+    </LastLogFile>
+  </WEB>
+  <SQL>
+    <LocalDB_UseDefaultInstance>TRUE</LocalDB_UseDefaultInstance>
+    <LocalDB_InstanceName></LocalDB_InstanceName>
+    <LocalDB_Account>sa</LocalDB_Account>
+    <LocalDB_Password>PASSWORD</LocalDB_Password>
+    <LocalDB_Port>1433</LocalDB_Port>
+    <LocalDB_Trusted>TURE</LocalDB_Trusted>
+    <LocalDB_EncrtypedPassword>FALSE</LocalDB_EncrtypedPassword>
+    <!--LocalDB_minQueryInterval is to set minimum interval to run monitoring queries for local DB. -->
+    <!--The default value is 2 seconds, and any value less than 3 seconds will be ignored.-->
+    <LocalDB_minQueryInterval>2</LocalDB_minQueryInterval>
+    <EnableCollectingRunningQueries>TRUE</EnableCollectingRunningQueries>
+  </SQL>
+</ServicePoint>

@@ -1,0 +1,1126 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+
+    <script src="common/js/jquery-1.11.3.min.js"></script>
+    <script src="common/js/bootstrap.min.js"></script>
+    <script src="common/js/common.js"></script>
+    <link href="common/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="common/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="common/css/common.css" rel="stylesheet" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <title>Servic Point</title>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <nav class="navbar navbar-inverse" role="navigation">
+            <div class="container-fluid">
+                <!-- 모바일 화면에서 메뉴라인 표시 -->
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <!-- //모바일 화면에서 메뉴라인 표시 -->
+                <!-- 메뉴 -->
+                <div class="collapse navbar-collapse" id="bs-navbar-collapse">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-th"></i> Service Point <sup>2.0</sup><span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#"><i class="fa fa-th"></i> 3 X 3</a></li>
+                                <li><a href="#"><i class="fa fa-th"></i> 7 X 4</a></li>
+                            </ul>
+                        </li>
+                        <li class="line-vertical"><a href="#">Servers Overview</a></li>
+                        <li><a href="#">Web Servers</a></li>
+                        <li><a href="#">Sql Servers</a></li>
+                        <li class="line-vertical"><a href="#"><i class="fa fa-file-text"></i> Reports</a></li>
+                        <li><a href="#"><i class="fa fa-gear"></i> Settings</a></li>
+                        <li><a href="#"><i class="fa fa-envelope"></i> Help</a></li>
+                        <li class="line-vertical"><a href="#"><i class="fa fa-home"></i> Code Classic Inc</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="line-vertical"><a href="#"><i class="fa fa-user"></i> User</a></li>
+                        <li class="line-vertical"><a href="#"><i class="fa fa-sign-out"></i> Logout</a></li>
+                    </ul>
+                </div>
+                <!-- //메뉴 -->
+            </div>
+        </nav>
+    </header>
+    <!-- //header -->
+    <!-- SQL Status Overview -->
+    <div class="container-fluid">
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-md-12 col-lg-12">
+                <h3>SQL Status Overview</h3>
+            </div>
+        </div>
+        <!-- //Page Heading -->
+        <!-- Page Contents-->
+        <div class="contents">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th colspan="2">Processor</th>
+                        <th colspan="2">Memory</th>
+                        <th colspan="2">Disk - System Drive</th>
+                        <th>Network</th>
+                        <th colspan="6">SQL Service</th>
+                    </tr>
+                    <tr>
+                        <th>Server</th>
+                        <th>%CPU</th>
+                        <th>QueueLength</th>
+                        <th>Committed</th>
+                        <th>Available</th>
+                        <th>Free Space</th>
+                        <th>Read Time(ms)</th>
+                        <th>Bytes Total/sec</th>
+                        <th>%CPU(SQL)</th>
+                        <th>Allocated / Used (MB)</th>
+                        <th>%Physical Idle Time</th>
+                        <th>Buffer cache hit (%)</th>
+                        <th class="gradeA">SQL Statistics</th>
+                        <th>Page life expectancy</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- App Servers-->
+                    <tr>
+                        <td class="bg-status-good text-white">
+                            <ul class="list-unstyled">
+                                <li><h5>App Servers (EN)</h5></li>
+                                <li><img src="common/image/ic_sql.png" /></li>
+                                <li>192.168.0.34</li>
+                                <li class="bold">Contents DB</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <div class="row text-small">
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding">100</div>
+                                    <div class="col-md-6 text-right nopadding">0</div>
+                                </div>
+                                <div class="col-md-12">
+                                    <img src="ChartImages/Sql/7_3_TimeIn_TotalCPU_KernelCPU.jpg" />
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding">-15 min</div>
+                                    <div class="col-md-6 text-right nopadding">0</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <img src="ChartImages/Sql/8_9_TimeIn_PQL.jpg" />
+                        </td>
+                        <td>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-danger progress-bar-striped" style="width: 40%">
+                                </div>
+                                <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 60%">
+                                </div>
+                            </div>
+                            <div class="row text-small">
+                                1.9GB
+                            </div>
+                        </td>
+                        <td>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-success progress-bar-striped" style="width: 80%">
+                                </div>
+                                <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 20%">
+                                </div>
+                            </div>
+                            <div class="row text-small">
+                                4.72GB
+                            </div>
+                        </td>
+                        <td>
+                            <img src="ChartImages/Sql/7_9_DiskFreeSpace.jpg" />
+                        </td>
+                        <td>
+                            <div class="row text-small">
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding">100</div>
+                                    <div class="col-md-6 text-right nopadding">0</div>
+                                </div>
+                                <div class="col-md-12">
+                                    <img src="ChartImages/Sql/7_9_TimeIn_ReadTime.jpg" />
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding">-15 min</div>
+                                    <div class="col-md-6 text-right nopadding">0</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row text-small">
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding">100MB</div>
+                                    <div class="col-md-6 text-right nopadding">0.1MB</div>
+                                </div>
+                                <div class="col-md-12">
+                                    <img src="ChartImages/Sql/7_9_TimeIn_ReadTime.jpg" />
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding">-15 min</div>
+                                    <div class="col-md-6 text-right nopadding">0</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row text-small">
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding">100</div>
+                                    <div class="col-md-6 text-right nopadding">0</div>
+                                </div>
+                                <div class="col-md-12">
+                                    <img src="ChartImages/Sql/7_2_TimeIn_BytesTotal.jpg" />
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding">-15 min</div>
+                                    <div class="col-md-6 text-right nopadding">0</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row text-small">
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding">6,442MB</div>
+                                    <div class="col-md-6 text-right nopadding">4703.55MB</div>
+                                </div>
+                                <div class="col-md-12">
+                                    <img src="ChartImages/Sql/7_2_TimeIn_BytesTotal.jpg" />
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding">-15 min</div>
+                                    <div class="col-md-6 text-right nopadding">0</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row text-small">
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding">100</div>
+                                    <div class="col-md-6 text-right nopadding">0</div>
+                                </div>
+                                <div class="col-md-12">
+                                    <img src="ChartImages/Sql/7_6_TimeIn_PDiskIdleTime.jpg" />
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding">-15 min</div>
+                                    <div class="col-md-6 text-right nopadding">0</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row text-small">
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding">100</div>
+                                    <div class="col-md-6 text-right nopadding">0</div>
+                                </div>
+                                <div class="col-md-12">
+                                    <img src="ChartImages/Sql/7_6_TimeIn_BufCacheHit.jpg" />
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding">-15 min</div>
+                                    <div class="col-md-6 text-right nopadding">0</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="col-md-8 text-left nopadding">Batch Requests:</div>
+                                    <div class="col-md-4 text-right nopadding">5.19</div>
+                                </div>
+                            </div>
+                            <div class="row pt5">
+                                <div class="col-md-12">
+                                    <div class="col-md-8 text-left nopadding">SQL Compilations:</div>
+                                    <div class="col-md-4 text-right nopadding">0.13</div>
+                                </div>
+                            </div>
+                            <div class="row pt5">
+                                <div class="col-md-12">
+                                    <div class="col-md-8 text-left nopadding">SQL-Recompilations:</div>
+                                    <div class="col-md-4 text-right nopadding">0</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row text-small">
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding"></div>
+                                    <div class="col-md-6 text-right nopadding">1815683</div>
+                                </div>
+                                <div class="col-md-12">
+                                    <img src="ChartImages/Sql/7_9_TimeIn_PageLifeExp.jpg" />
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding">-15 min</div>
+                                    <div class="col-md-6 text-right nopadding">0</div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- //App Servers-->
+                    <!-- Corp Sales-->
+                    <tr>
+                        <td class="bg-status-warning text-white">
+                            <ul class="list-unstyled">
+                                <li><h5>Corp Sales (KR)</h5></li>
+                                <li><img src="common/image/ic_sql.png" /></li>
+                                <li>192.168.0.34</li>
+                                <li class="bold">CORP_DBSVR01</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <div class="row text-small">
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding">100</div>
+                                    <div class="col-md-6 text-right nopadding">0</div>
+                                </div>
+                                <div class="col-md-12">
+                                    <img src="ChartImages/Sql/7_3_TimeIn_TotalCPU_KernelCPU.jpg" />
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding">-15 min</div>
+                                    <div class="col-md-6 text-right nopadding">0</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <img src="ChartImages/Sql/8_9_TimeIn_PQL.jpg" />
+                        </td>
+                        <td>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-danger progress-bar-striped" style="width: 40%">
+                                </div>
+                                <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 60%">
+                                </div>
+                            </div>
+                            <div class="row text-small">
+                                1.9GB
+                            </div>
+                        </td>
+                        <td>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-success progress-bar-striped" style="width: 80%">
+                                </div>
+                                <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 20%">
+                                </div>
+                            </div>
+                            <div class="row text-small">
+                                4.72GB
+                            </div>
+                        </td>
+                        <td>
+                            <img src="ChartImages/Sql/7_9_DiskFreeSpace.jpg" />
+                        </td>
+                        <td>
+                            <div class="row text-small">
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding">100</div>
+                                    <div class="col-md-6 text-right nopadding">0</div>
+                                </div>
+                                <div class="col-md-12">
+                                    <img src="ChartImages/Sql/7_9_TimeIn_ReadTime.jpg" />
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding">-15 min</div>
+                                    <div class="col-md-6 text-right nopadding">0</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row text-small">
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding">100MB</div>
+                                    <div class="col-md-6 text-right nopadding">0.1MB</div>
+                                </div>
+                                <div class="col-md-12">
+                                    <img src="ChartImages/Sql/7_9_TimeIn_ReadTime.jpg" />
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding">-15 min</div>
+                                    <div class="col-md-6 text-right nopadding">0</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row text-small">
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding">100</div>
+                                    <div class="col-md-6 text-right nopadding">0</div>
+                                </div>
+                                <div class="col-md-12">
+                                    <img src="ChartImages/Sql/7_2_TimeIn_BytesTotal.jpg" />
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding">-15 min</div>
+                                    <div class="col-md-6 text-right nopadding">0</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row text-small">
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding">6,442MB</div>
+                                    <div class="col-md-6 text-right nopadding">4703.55MB</div>
+                                </div>
+                                <div class="col-md-12">
+                                    <img src="ChartImages/Sql/7_2_TimeIn_BytesTotal.jpg" />
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding">-15 min</div>
+                                    <div class="col-md-6 text-right nopadding">0</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row text-small">
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding">100</div>
+                                    <div class="col-md-6 text-right nopadding">0</div>
+                                </div>
+                                <div class="col-md-12">
+                                    <img src="ChartImages/Sql/7_6_TimeIn_PDiskIdleTime.jpg" />
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding">-15 min</div>
+                                    <div class="col-md-6 text-right nopadding">0</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row text-small">
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding">100</div>
+                                    <div class="col-md-6 text-right nopadding">0</div>
+                                </div>
+                                <div class="col-md-12">
+                                    <img src="ChartImages/Sql/7_6_TimeIn_BufCacheHit.jpg" />
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding">-15 min</div>
+                                    <div class="col-md-6 text-right nopadding">0</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="col-md-8 text-left nopadding">Batch Requests:</div>
+                                    <div class="col-md-4 text-right nopadding">5.19</div>
+                                </div>
+                            </div>
+                            <div class="row pt5">
+                                <div class="col-md-12">
+                                    <div class="col-md-8 text-left nopadding">SQL Compilations:</div>
+                                    <div class="col-md-4 text-right nopadding">0.13</div>
+                                </div>
+                            </div>
+                            <div class="row pt5">
+                                <div class="col-md-12">
+                                    <div class="col-md-8 text-left nopadding">SQL-Recompilations:</div>
+                                    <div class="col-md-4 text-right nopadding">0</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row text-small">
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding"></div>
+                                    <div class="col-md-6 text-right nopadding">1815683</div>
+                                </div>
+                                <div class="col-md-12">
+                                    <img src="ChartImages/Sql/7_9_TimeIn_PageLifeExp.jpg" />
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding">-15 min</div>
+                                    <div class="col-md-6 text-right nopadding">0</div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- //Corp Sales-->
+                    <!-- Portal -->
+                    <tr>
+                        <td class="bg-status-warning text-white">
+                            <ul class="list-unstyled">
+                                <li><h5>Portal (JP)</h5></li>
+                                <li><img src="common/image/ic_sql.png" /></li>
+                                <li>192.168.0.34</li>
+                                <li class="bold">Search DB</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <div class="row text-small">
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding">100</div>
+                                    <div class="col-md-6 text-right nopadding">0</div>
+                                </div>
+                                <div class="col-md-12">
+                                    <img src="ChartImages/Sql/7_3_TimeIn_TotalCPU_KernelCPU.jpg" />
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding">-15 min</div>
+                                    <div class="col-md-6 text-right nopadding">0</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <img src="ChartImages/Sql/8_9_TimeIn_PQL.jpg" />
+                        </td>
+                        <td>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-danger progress-bar-striped" style="width: 40%">
+                                </div>
+                                <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 60%">
+                                </div>
+                            </div>
+                            <div class="row text-small">
+                                1.9GB
+                            </div>
+                        </td>
+                        <td>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-success progress-bar-striped" style="width: 80%">
+                                </div>
+                                <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 20%">
+                                </div>
+                            </div>
+                            <div class="row text-small">
+                                4.72GB
+                            </div>
+                        </td>
+                        <td>
+                            <img src="ChartImages/Sql/7_9_DiskFreeSpace.jpg" />
+                        </td>
+                        <td>
+                            <div class="row text-small">
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding">100</div>
+                                    <div class="col-md-6 text-right nopadding">0</div>
+                                </div>
+                                <div class="col-md-12">
+                                    <img src="ChartImages/Sql/7_9_TimeIn_ReadTime.jpg" />
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding">-15 min</div>
+                                    <div class="col-md-6 text-right nopadding">0</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row text-small">
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding">100MB</div>
+                                    <div class="col-md-6 text-right nopadding">0.1MB</div>
+                                </div>
+                                <div class="col-md-12">
+                                    <img src="ChartImages/Sql/7_9_TimeIn_ReadTime.jpg" />
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding">-15 min</div>
+                                    <div class="col-md-6 text-right nopadding">0</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row text-small">
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding">100</div>
+                                    <div class="col-md-6 text-right nopadding">0</div>
+                                </div>
+                                <div class="col-md-12">
+                                    <img src="ChartImages/Sql/7_2_TimeIn_BytesTotal.jpg" />
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding">-15 min</div>
+                                    <div class="col-md-6 text-right nopadding">0</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row text-small">
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding">6,442MB</div>
+                                    <div class="col-md-6 text-right nopadding">4703.55MB</div>
+                                </div>
+                                <div class="col-md-12">
+                                    <img src="ChartImages/Sql/7_2_TimeIn_BytesTotal.jpg" />
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding">-15 min</div>
+                                    <div class="col-md-6 text-right nopadding">0</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row text-small">
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding">100</div>
+                                    <div class="col-md-6 text-right nopadding">0</div>
+                                </div>
+                                <div class="col-md-12">
+                                    <img src="ChartImages/Sql/7_6_TimeIn_PDiskIdleTime.jpg" />
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding">-15 min</div>
+                                    <div class="col-md-6 text-right nopadding">0</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row text-small">
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding">100</div>
+                                    <div class="col-md-6 text-right nopadding">0</div>
+                                </div>
+                                <div class="col-md-12">
+                                    <img src="ChartImages/Sql/7_6_TimeIn_BufCacheHit.jpg" />
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding">-15 min</div>
+                                    <div class="col-md-6 text-right nopadding">0</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="col-md-8 text-left nopadding">Batch Requests:</div>
+                                    <div class="col-md-4 text-right nopadding">5.19</div>
+                                </div>
+                            </div>
+                            <div class="row pt5">
+                                <div class="col-md-12">
+                                    <div class="col-md-8 text-left nopadding">SQL Compilations:</div>
+                                    <div class="col-md-4 text-right nopadding">0.13</div>
+                                </div>
+                            </div>
+                            <div class="row pt5">
+                                <div class="col-md-12">
+                                    <div class="col-md-8 text-left nopadding">SQL-Recompilations:</div>
+                                    <div class="col-md-4 text-right nopadding">0</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row text-small">
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding"></div>
+                                    <div class="col-md-6 text-right nopadding">1815683</div>
+                                </div>
+                                <div class="col-md-12">
+                                    <img src="ChartImages/Sql/7_9_TimeIn_PageLifeExp.jpg" />
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="col-md-6 text-left nopadding">-15 min</div>
+                                    <div class="col-md-6 text-right nopadding">0</div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- //Portal-->
+                </tbody>
+            </table>
+        </div>
+        <!-- //Page Contents-->
+    </div>
+    <!-- //SQL Status Overview -->
+    <!-- Alerts in last 15minutes / List of alerts -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 nopadding">
+                <!-- Alerts in last 15 minutes -->
+                <div class="container-fluid">
+                    <!-- Page Heading -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h3 class="no-bold">Alerts in last 15 minutes</h3>
+                        </div>
+                    </div>
+                    <!-- //Page Heading -->
+                    <!-- Page Contents-->
+                    <div class="alerts-contents">
+                        <!-- Alerts > App Servers -->
+                        <section id="alert-app-servers" class="alerts">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-1 nopadding">
+                                        <div class="col-sm-12 col-md-12 bg-alert-default text-center box">
+                                            <h4>App Servers (EN)</h4>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-11 nopadding">
+                                        <!-- server 1 -->
+                                        <div class="col-sm-4 col-md-4 bg-alert-text box">
+                                            <div class="carousel slide" data-interval="3000" data-ride="carousel">
+                                                <div class="carousel-inner">
+                                                    <!-- slider 1 -->
+                                                    <div class="item active">
+                                                        <div class="media-left">
+                                                            <img src="common/image/ic_information.png" />
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <h5 class="media-heading">Contents DB</h5>
+                                                            <ul class="list-unstyled">
+                                                                <li></li>
+                                                                <li class="text-red">2015-10-27 오후 5:15:50</li>
+                                                                <li>[SQL] Info Errors have been found</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <!-- //slider 1 -->
+                                                    <!-- slider 2 -->
+                                                    <div class="item">
+                                                        <div class="media-left">
+                                                            <img src="common/image/ic_information.png" />
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <h5 class="media-heading">Contents DB</h5>
+                                                            <ul class="list-unstyled">
+                                                                <li>CODECLASSIC</li>
+                                                                <li class="text-red">2015-10-27 오후 5:15:50</li>
+                                                                <li>[SQL] Info Errors have been found</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <!-- //slider 2 -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //server 1 -->
+                                        <!-- server 2 -->
+                                        <div class="col-sm-4 col-md-4 bg-alert-text box">
+                                            <div class="carousel slide" data-interval="3000" data-ride="carousel">
+                                                <div class="carousel-inner">
+                                                    <!-- slider 1 -->
+                                                    <div class="item active">
+                                                        <div class="media-left">
+                                                            <img src="common/image/ic_warning.png" />
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <h5 class="media-heading">Contents DB</h5>
+                                                            <ul class="list-unstyled">
+                                                                <li></li>
+                                                                <li class="text-red">2015-10-27 오후 5:15:50</li>
+                                                                <li>[SQL] Info Errors have been found</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <!-- //slider 1 -->
+                                                    <!-- slider 2 -->
+                                                    <div class="item">
+                                                        <div class="media-left">
+                                                            <img src="common/image/ic_information.png" />
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <h5 class="media-heading">Contents DB</h5>
+                                                            <ul class="list-unstyled">
+                                                                <li>CODECLASSIC</li>
+                                                                <li class="text-red">2015-10-27 오후 5:15:50</li>
+                                                                <li>[SQL] Info Errors have been found</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <!-- //slider 2 -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //server 2 -->
+                                        <!-- server 3 -->
+                                        <div class="col-sm-4 col-md-4 bg-alert-text box">
+                                            <div class="carousel slide" data-interval="3000" data-ride="carousel">
+                                                <div class="carousel-inner">
+                                                    <!-- slider 1 -->
+                                                    <div class="item active">
+                                                        <div class="media-left">
+                                                            <img src="common/image/ic_warning.png" />
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <h5 class="media-heading">Contents DB</h5>
+                                                            <ul class="list-unstyled">
+                                                                <li></li>
+                                                                <li class="text-red">2015-10-27 오후 5:15:50</li>
+                                                                <li>[SQL] Info Errors have been found</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <!-- //slider 1 -->
+                                                    <!-- slider 2 -->
+                                                    <div class="item">
+                                                        <div class="media-left">
+                                                            <img src="common/image/ic_information.png" />
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <h5 class="media-heading">Contents DB</h5>
+                                                            <ul class="list-unstyled">
+                                                                <li>CODECLASSIC</li>
+                                                                <li class="text-red">2015-10-27 오후 5:15:50</li>
+                                                                <li>[SQL] Info Errors have been found</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <!-- //slider 2 -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //server 3 -->
+                                    </div>
+
+                                </div>
+                            </div>
+                        </section>
+                        <!-- //Alerts > App Servers -->
+                        <!-- Alerts > Corp Sales -->
+                        <section id="alert-corp-sales" class="alerts">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-1 nopadding">
+                                        <div class="col-sm-12 col-md-12 bg-alert-default text-center box">
+                                            <h4>Corp Sales (KR)</h4>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-11 nopadding">
+                                        <!-- server 1 -->
+                                        <div class="col-sm-4 col-md-4 bg-alert-text box">
+                                            <div class="carousel slide" data-interval="3000" data-ride="carousel">
+                                                <div class="carousel-inner">
+                                                    <!-- slider 1 -->
+                                                    <div class="item active">
+                                                        <div class="media-left">
+                                                            <img src="common/image/ic_information.png" />
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <h5 class="media-heading">Contents DB</h5>
+                                                            <ul class="list-unstyled">
+                                                                <li></li>
+                                                                <li class="text-red">2015-10-27 오후 5:15:50</li>
+                                                                <li>[SQL] Info Errors have been found</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <!-- //slider 1 -->
+                                                    <!-- slider 2 -->
+                                                    <div class="item">
+                                                        <div class="media-left">
+                                                            <img src="common/image/ic_information.png" />
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <h5 class="media-heading">Contents DB</h5>
+                                                            <ul class="list-unstyled">
+                                                                <li>CODECLASSIC</li>
+                                                                <li class="text-red">2015-10-27 오후 5:15:50</li>
+                                                                <li>[SQL] Info Errors have been found</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <!-- //slider 2 -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //server 1 -->
+                                        <!-- server 2 -->
+                                        <div class="col-sm-4 col-md-4 bg-alert-text box">
+                                            <div class="carousel slide" data-interval="3000" data-ride="carousel">
+                                                <div class="carousel-inner">
+                                                    <!-- slider 1 -->
+                                                    <div class="item active">
+                                                        <div class="media-left">
+                                                            <img src="common/image/ic_warning.png" />
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <h5 class="media-heading">Contents DB</h5>
+                                                            <ul class="list-unstyled">
+                                                                <li></li>
+                                                                <li class="text-red">2015-10-27 오후 5:15:50</li>
+                                                                <li>[SQL] Info Errors have been found</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <!-- //slider 1 -->
+                                                    <!-- slider 2 -->
+                                                    <div class="item">
+                                                        <div class="media-left">
+                                                            <img src="common/image/ic_information.png" />
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <h5 class="media-heading">Contents DB</h5>
+                                                            <ul class="list-unstyled">
+                                                                <li>CODECLASSIC</li>
+                                                                <li class="text-red">2015-10-27 오후 5:15:50</li>
+                                                                <li>[SQL] Info Errors have been found</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <!-- //slider 2 -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //server 2 -->
+                                        <!-- server 3 -->
+                                        <div class="col-sm-4 col-md-4 bg-alert-text box">
+                                            <div class="carousel slide" data-interval="3000" data-ride="carousel">
+                                                <div class="carousel-inner">
+                                                    <!-- slider 1 -->
+                                                    <div class="item active">
+                                                        <div class="media-left">
+                                                            <img src="common/image/ic_warning.png" />
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <h5 class="media-heading">Contents DB</h5>
+                                                            <ul class="list-unstyled">
+                                                                <li></li>
+                                                                <li class="text-red">2015-10-27 오후 5:15:50</li>
+                                                                <li>[SQL] Info Errors have been found</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <!-- //slider 1 -->
+                                                    <!-- slider 2 -->
+                                                    <div class="item">
+                                                        <div class="media-left">
+                                                            <img src="common/image/ic_information.png" />
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <h5 class="media-heading">Contents DB</h5>
+                                                            <ul class="list-unstyled">
+                                                                <li>CODECLASSIC</li>
+                                                                <li class="text-red">2015-10-27 오후 5:15:50</li>
+                                                                <li>[SQL] Info Errors have been found</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <!-- //slider 2 -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //server 3 -->
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </section>
+                        <!-- //Alerts > Corp Sales -->
+                        <!-- Alerts > Portal -->
+                        <section id="alert-portal" class="alerts">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-1 nopadding">
+                                        <div class="col-sm-12 col-md-12 bg-alert-default text-center box">
+                                            <h4>Portal (JP)</h4>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-11 nopadding">
+                                        <!-- server 1 -->
+                                        <div class="col-sm-4 col-md-4 bg-alert-text box">
+                                            <div class="carousel slide" data-interval="3000" data-ride="carousel">
+                                                <div class="carousel-inner">
+                                                    <!-- slider 1 -->
+                                                    <div class="item active">
+                                                        <div class="media-left">
+                                                            <img src="common/image/ic_information.png" />
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <h5 class="media-heading">Contents DB</h5>
+                                                            <ul class="list-unstyled">
+                                                                <li></li>
+                                                                <li class="text-red">2015-10-27 오후 5:15:50</li>
+                                                                <li>[SQL] Info Errors have been found</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <!-- //slider 1 -->
+                                                    <!-- slider 2 -->
+                                                    <div class="item">
+                                                        <div class="media-left">
+                                                            <img src="common/image/ic_information.png" />
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <h5 class="media-heading">Contents DB</h5>
+                                                            <ul class="list-unstyled">
+                                                                <li>CODECLASSIC</li>
+                                                                <li class="text-red">2015-10-27 오후 5:15:50</li>
+                                                                <li>[SQL] Info Errors have been found</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <!-- //slider 2 -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //server 1 -->
+                                        <!-- server 2 -->
+                                        <div class="col-sm-4 col-md-4 bg-alert-text box">
+                                            <div class="carousel slide" data-interval="3000" data-ride="carousel">
+                                                <div class="carousel-inner">
+                                                    <!-- slider 1 -->
+                                                    <div class="item active">
+                                                        <div class="media-left">
+                                                            <img src="common/image/ic_warning.png" />
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <h5 class="media-heading">Contents DB</h5>
+                                                            <ul class="list-unstyled">
+                                                                <li></li>
+                                                                <li class="text-red">2015-10-27 오후 5:15:50</li>
+                                                                <li>[SQL] Info Errors have been found</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <!-- //slider 1 -->
+                                                    <!-- slider 2 -->
+                                                    <div class="item">
+                                                        <div class="media-left">
+                                                            <img src="common/image/ic_information.png" />
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <h5 class="media-heading">Contents DB</h5>
+                                                            <ul class="list-unstyled">
+                                                                <li>CODECLASSIC</li>
+                                                                <li class="text-red">2015-10-27 오후 5:15:50</li>
+                                                                <li>[SQL] Info Errors have been found</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <!-- //slider 2 -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //server 2 -->
+                                        <!-- server 3 -->
+                                        <div class="col-sm-4 col-md-4 bg-alert-text box">
+                                            <div class="carousel slide" data-interval="3000" data-ride="carousel">
+                                                <div class="carousel-inner">
+                                                    <!-- slider 1 -->
+                                                    <div class="item active">
+                                                        <div class="media-left">
+                                                            <img src="common/image/ic_warning.png" />
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <h5 class="media-heading">Contents DB</h5>
+                                                            <ul class="list-unstyled">
+                                                                <li></li>
+                                                                <li class="text-red">2015-10-27 오후 5:15:50</li>
+                                                                <li>[SQL] Info Errors have been found</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <!-- //slider 1 -->
+                                                    <!-- slider 2 -->
+                                                    <div class="item">
+                                                        <div class="media-left">
+                                                            <img src="common/image/ic_information.png" />
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <h5 class="media-heading">Contents DB</h5>
+                                                            <ul class="list-unstyled">
+                                                                <li>CODECLASSIC</li>
+                                                                <li class="text-red">2015-10-27 오후 5:15:50</li>
+                                                                <li>[SQL] Info Errors have been found</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <!-- //slider 2 -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- //server 3 -->
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </section>
+                        <!-- //Alerts > Portal -->
+                    </div>
+                    <!-- //Page Contents-->
+                </div>
+                <!-- //Alerts in last 15 minutes -->
+            </div>
+            <div class="col-md-6 nopadding">
+                <!-- List of alerts in last 15 minutes -->
+                <div class="container-fluid">
+                    <!-- Page Heading -->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3 class="no-bold">List of alerts in last 15 minutes</h3>
+                        </div>
+                        <div class="col-md-6 alert-check">
+                            <ul class="list-unstyled list-inline">
+                                <li><input type="checkbox"> Critical</li>
+                                <li><input type="checkbox"> Warning</li>
+                                <li><input type="checkbox"> Information</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <!-- //Page Heading -->
+                    <!-- Page Contents-->
+                    <div class="alerts-contents">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Server</th>
+                                    <th class="gradeA">Alert Description</th>
+                                    <th>Instance</th>
+                                    <th>#Counts</th>
+                                    <th class="gradeB">Last Occured</th>
+                                    <th>Level</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>CORP_DBSVR01</td>
+                                    <td>[SQL] Service 응답이 없습니다.</td>
+                                    <td>SQL Server 에이전트 (MSSQLSERVER)</td>
+                                    <td>59</td>
+                                    <td class="bg-alert-gray">2015-10-28 18:13:13</td>
+                                    <td class="bg-status-info text-white">Information</td>
+                                </tr>
+                                <tr>
+                                    <td>Contents DB</td>
+                                    <td>CPU처리 지연이 발견되었습니다. CPU당 대기 쓰레드 수가 2보다 큽니다.</td>
+                                    <td></td>
+                                    <td>18</td>
+                                    <td class="bg-alert-gray">2015-10-28 18:13:13</td>
+                                    <td class="bg-status-warning text-white">Warning</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //Page Contents-->
+                </div>
+                <!-- //List of alerts in last 15 minutes -->
+            </div>
+        </div>
+    </div>
+    <!-- //Alerts in last 15minutes / List of alerts -->
+</body>
+</html>
